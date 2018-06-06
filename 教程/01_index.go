@@ -27,4 +27,96 @@ func main() {
 	b := 8
 	fmt.Println(b)
 
+
+
+	/*
+		Println和Printf区别
+		Println：一段一段处理，自动加换行
+		Printf：格式化输出，把a放在%d的位置
+
+	*/
+	fmt.Println("a=",a)
+
+	fmt.Printf("a=%d\n",a)
+
+
+	/*
+	8.多重初始化
+	a,b,c := 1,2,3
+
+		两个变量值交换
+		i := 10
+		j := 20
+		i,j = j,i
+
+	9.匿名变量
+		_ 匿名变量，丢弃数据不处理，_匿名变量配合函数返回值使用，才有优势
+		如函数返回多个返回值，可以只取其中1个或多个
+		func test()(a,b,c int){
+			return 1,2,3
+		}
+		_,d,e = test()
+
+	10.不同类型的变量定义或常量定义,可自动推倒类型
+		var a int
+		var b float64
+		-------------
+		a,b = 10,3,14
+		-------------
+		var (
+			a int
+			b float64
+		)
+		-------------
+		var (
+			a = 1
+			b =1.1
+		)
+
+		const i int = 9
+		const j float64 = 1.11
+		--------------
+		const (
+			i int = 9
+			j float64 = 1.11
+		)
+		--------------
+		const (
+			i  = 9
+			j  = 1.11
+		)
+
+
+	11.iota枚举
+		（1）iota常量自动生成器，每个一行，自动累加1
+		（2）iota给常量赋值使用
+		（3）iota遇到const，重置为0
+			const (
+				a = iota   //0
+				b = iota   //1
+				c = iota   //2
+			)
+
+			const d = iota //重置为0
+		（4）可以只写一个iota
+			const (
+				a = iota
+				b
+				c
+			)
+		(5)如果是同一行，值都一样
+			const (
+				i = iota  // 0
+				j1,j2,j3 = iota,iota,iota // 1
+				k = iota     // 2
+			)
+
+	*/
+
+
+
+
+
+
+
 }
