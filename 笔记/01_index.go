@@ -33,6 +33,8 @@ func main() {
 		Println和Printf区别
 		Println：一段一段处理，自动加换行
 		Printf：格式化输出，把a放在%d的位置
+			%c：字符方式打印
+			%d：以整型方式打印
 
 	*/
 	fmt.Println("a=",a)
@@ -114,7 +116,62 @@ func main() {
 	*/
 
 
+	/*
+	12.数据类型
+		bool类型，没有初始化，默认值为false
+			var a bool = true
+			var b =	true
+			c := true
+		浮点类型，float64比float32存储小数更准确
+			var f1 float32
+			f1 = 3.14
+			f2 := 3.14
+		字符类型，byte，单个英文，用单引号''
+			1.单引号
+			2.往往都只有一个字符，转义字符除外，'\n'
+		字符串类型，string
+			1.双引号
+			2.字符串有1个或多个字符组成
+			3.字符串都隐藏一个结束符 '\0'
+				str = "a" //由a和\0组成了一个字符串
+		复数类型，complex
 
+
+	13.格式化输出
+		%T：操作变量所属类型
+		%d：整型格式
+		%s：字符串格式
+		%c：字符格式
+		%f：浮点型格式
+		%v：自动匹配格式输出
+
+
+	14.输入的使用
+		阻塞等待用户的输入
+		fmt.Scanf("%f",&a)  //别忘了&
+		fmt.Scan(&a)
+
+		fmt.Println(a)
+
+	15.类型别名
+		type bigint int64  //给int64起一个别名bigint
+			var a bigint  相当于 var a int64
+		type (
+			longint int64
+			char byte
+			)
+
+	16.其他运算符
+		& 	取地址运算符   &a   变量a的地址
+		*	取值运算符     *a	   指针变量a所指向内存的值
+
+
+
+
+
+
+
+	*/
 
 
 
