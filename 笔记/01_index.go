@@ -166,12 +166,95 @@ func main() {
 		*	取值运算符     *a	   指针变量a所指向内存的值
 
 
+	17. if 和 { 就是条件，昨括号和if在同一行
+		if s == ''{
+
+		}
+		也可以支持1个初始化语句，初始化语句和判断条件以分号分隔
+		if a := 10;a == 10{
+
+		}
+
+		if a:=10;a == 10 {
+
+		}else if a > 10 {
+
+		}else{
+
+		}
+
+	18.switch
+		num :=1
+		switch num { 		//switch num:=10;num {
+		case 1:
+			fmt.Println("1")
+			break	//go语言保留了break关键字，跳出switch，不写也行，默认就包含
+			fallthrough		//不跳出switch，后面的无条件执行
+
+		case 2:
+			fmt.Println("2")
+			//break
+		case 3:
+			fmt.Println("3")
+			//break
+		default:
+			fmt.Println("default")
+		}
+
+		case后面可以放条件
+		score:=95
+		switch {
+		case score > 90:
+			fmt.Println("优秀")
+		case score < 90:
+			fmt.Println("良好")
+		default:
+			fmt.Println("其他")
+		}
 
 
+	19.循环语句：for	，range-迭代器
+		for 初始化条件;判断条件;条件变化{
+		}
 
+		累加示例
+		sum := 0
+		for i := 1;i <= 100;i++{
+			sum = sum + i
+		}
 
+		迭代配合数组或者切片
+		迭代会默认返回两个值，一个元素位置，一个元素本身
+		str := "abc"
+		for i,data := range str{
+
+		}
+		for i := range str{	//第二个返回值，默认丢弃，返回元素的位置（下标）
+
+		}
+		for i,_ := range str{	//第二个返回值，默认丢弃，返回元素的位置（下标）
+
+		}
+
+	20.跳转语句
+		break可用于for,switch,select
+		continue仅能用于for
+
+		i:=0
+		for {	//for后面不写任何东西，这个循环条件永远为真，死循环
+			i++
+
+			if i==5{
+				break	//跳出循环，如果嵌套多个循环，跳出最近的那个内循环
+				continue	//跳出本次循环，写一次继续
+			}
+
+		}
+
+	21.goto--可以用在任何地方，但不能跨函数使用，
 
 	*/
+
 
 
 
