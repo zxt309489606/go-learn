@@ -8,6 +8,13 @@ func main(){
 
 /*
 	函数
+	函数名称：根据约定，首字母小写为private，大写为public
+	参数列表：函数可以是0个或多个参数，参数格式为：变量名 类型，如果有多个参数通过逗号分隔，不支持默认参数
+	返回类型：
+			1.如果有多个返回值，变量名不是必须的，可以只有类型
+			2.如果只有一个返回值且不声明返回值变量，那么可以省略，包括返回值的括号，如 func myfunc() int{}
+			3.如果没有返回值，那么直接省略最后的返回信息
+			4.如果有返回值，那么必须在函数的内部添加return语句
 
 	0.定义格式
 	func FuncName (参数列表) (返回类型){
@@ -64,6 +71,33 @@ func main(){
 		Myfunc1(args[2:]...) //从args[2]开始，包括本身，把后面所有元素传递过去
 
 	}
+	5.无参有返回值，只有1个返回值
+		有返回值的需要return中断函数，通过retuan返回
+		func Myfunc(){
+			return 666
+		}
+		给返回值起一个变量名，go推荐的写法，常用写法
+		func Myfunc() (result int){
+			result = 666
+			return
+		}
+
+	6.函数有多个返回值
+		//
+		func Myfunc() (int,int,int){
+			return 1,3,4
+		}
+		调用：a,b,c := Myfunc()
+		//go推荐写法
+		func Myfunc() (a int,b int,c int){
+			a,b,c = 11,22,33
+			return
+		}
+		调用：a,b,c := Myfunc()
+
+	7.有参数也有返回值
+
+
 
 
 
